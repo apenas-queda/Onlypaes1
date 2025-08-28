@@ -16,7 +16,7 @@ namespace Onlypães.Model
                              PORT = "49170",
                              DATABASE = "onlypães",
                              UID = "root",
-                             PWD = "senha_bd";
+                             PWD = "";
         /*
         IMPORTANTE!
         Ao enviar ao GitHub ou algum diretório público, altere as informações acima ou

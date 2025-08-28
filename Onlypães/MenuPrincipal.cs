@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace Onlypães
 {
     public partial class MenuPrincipal : Form
     {
-        public MenuPrincipal()
+        // Variaveis globais:
+        Model.Usuario usuario = new Model.Usuario();
+        public MenuPrincipal(Model.Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
+            lblDescricao.Text = $"Olá {usuario.NomeCompleto},\n escolha uma opção abaixo";
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,6 +35,7 @@
             this.btnCaixa = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
+            this.lblDescricao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // 
             this.pictureBox1.Image = global::Onlypães.Properties.Resources.ChatGPT_Image_27_de_ago__de_2025__20_10_53;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 148);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(303, 278);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -62,7 +63,7 @@
             // 
             // btnComanda
             // 
-            this.btnComanda.Location = new System.Drawing.Point(307, 81);
+            this.btnComanda.Location = new System.Drawing.Point(307, 148);
             this.btnComanda.Name = "btnComanda";
             this.btnComanda.Size = new System.Drawing.Size(335, 65);
             this.btnComanda.TabIndex = 3;
@@ -71,7 +72,7 @@
             // 
             // btnCaixa
             // 
-            this.btnCaixa.Location = new System.Drawing.Point(307, 152);
+            this.btnCaixa.Location = new System.Drawing.Point(307, 219);
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Size = new System.Drawing.Size(335, 65);
             this.btnCaixa.TabIndex = 4;
@@ -80,7 +81,7 @@
             // 
             // btnUsuarios
             // 
-            this.btnUsuarios.Location = new System.Drawing.Point(307, 294);
+            this.btnUsuarios.Location = new System.Drawing.Point(307, 361);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(335, 65);
             this.btnUsuarios.TabIndex = 5;
@@ -89,12 +90,22 @@
             // 
             // btnProdutos
             // 
-            this.btnProdutos.Location = new System.Drawing.Point(307, 223);
+            this.btnProdutos.Location = new System.Drawing.Point(307, 290);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(335, 65);
             this.btnProdutos.TabIndex = 6;
             this.btnProdutos.Text = "Produtos";
             this.btnProdutos.UseVisualStyleBackColor = true;
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(174)))), ((int)(((byte)(108)))));
+            this.lblDescricao.Location = new System.Drawing.Point(301, 34);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(0, 25);
+            this.lblDescricao.TabIndex = 7;
             // 
             // MenuPrincipal
             // 
@@ -102,6 +113,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
             this.ClientSize = new System.Drawing.Size(654, 465);
+            this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.btnProdutos);
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnCaixa);
@@ -115,6 +127,7 @@
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OnlyPães :: Menu Principal";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,5 +141,6 @@
         private System.Windows.Forms.Button btnCaixa;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnProdutos;
+        private System.Windows.Forms.Label lblDescricao;
     }
 }
