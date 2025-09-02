@@ -22,9 +22,10 @@ namespace Onlypães
             lblDescricao.Text = $"Olá {usuario.NomeCompleto},\n escolha uma opção abaixo";
         }
 
-        private void MenuPrincipal_Load(object sender, EventArgs e)
+        private void btnUsuarios_Click(object sender, EventArgs e)
         {
-
+            FormUsuarios formUsuarios = new FormUsuarios(usuario);
+            formUsuarios.ShowDialog(); // Mostrar o form
         }
     }
 }

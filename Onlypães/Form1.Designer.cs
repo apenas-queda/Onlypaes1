@@ -49,6 +49,8 @@
             // 
             // txbEmail
             // 
+            this.txbEmail.BackColor = System.Drawing.Color.SaddleBrown;
+            this.txbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbEmail.Location = new System.Drawing.Point(89, 63);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(193, 20);
@@ -56,6 +58,8 @@
             // 
             // txbSenha
             // 
+            this.txbSenha.BackColor = System.Drawing.Color.SaddleBrown;
+            this.txbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbSenha.Location = new System.Drawing.Point(89, 102);
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.PasswordChar = '☺';
@@ -73,12 +77,14 @@
             // 
             // btnEntrar
             // 
+            this.btnEntrar.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Location = new System.Drawing.Point(54, 157);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(228, 82);
             this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // lblLogin

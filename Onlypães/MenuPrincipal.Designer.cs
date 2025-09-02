@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.lblMenu = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnComanda = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
             this.lblDescricao = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,52 +50,51 @@
             this.lblMenu.TabIndex = 1;
             this.lblMenu.Text = "Menu Principal";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Onlypães.Properties.Resources.ChatGPT_Image_27_de_ago__de_2025__20_10_53;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 148);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(303, 278);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnComanda
             // 
+            this.btnComanda.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnComanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComanda.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnComanda.Location = new System.Drawing.Point(307, 148);
             this.btnComanda.Name = "btnComanda";
             this.btnComanda.Size = new System.Drawing.Size(335, 65);
             this.btnComanda.TabIndex = 3;
             this.btnComanda.Text = "Comanda";
-            this.btnComanda.UseVisualStyleBackColor = true;
+            this.btnComanda.UseVisualStyleBackColor = false;
             // 
             // btnCaixa
             // 
+            this.btnCaixa.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaixa.Location = new System.Drawing.Point(307, 219);
             this.btnCaixa.Name = "btnCaixa";
             this.btnCaixa.Size = new System.Drawing.Size(335, 65);
             this.btnCaixa.TabIndex = 4;
             this.btnCaixa.Text = "Caixa";
-            this.btnCaixa.UseVisualStyleBackColor = true;
+            this.btnCaixa.UseVisualStyleBackColor = false;
             // 
             // btnUsuarios
             // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Location = new System.Drawing.Point(307, 361);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(335, 65);
             this.btnUsuarios.TabIndex = 5;
             this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnProdutos
             // 
+            this.btnProdutos.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProdutos.Location = new System.Drawing.Point(307, 290);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(335, 65);
             this.btnProdutos.TabIndex = 6;
             this.btnProdutos.Text = "Produtos";
-            this.btnProdutos.UseVisualStyleBackColor = true;
+            this.btnProdutos.UseVisualStyleBackColor = false;
             // 
             // lblDescricao
             // 
@@ -106,6 +105,17 @@
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(0, 25);
             this.lblDescricao.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Onlypães.Properties.Resources.ChatGPT_Image_27_de_ago__de_2025__20_10_53;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 148);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(303, 278);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // MenuPrincipal
             // 
@@ -127,7 +137,6 @@
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OnlyPães :: Menu Principal";
-            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

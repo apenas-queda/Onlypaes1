@@ -63,6 +63,36 @@ namespace Onlypães.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baker {
+            get {
+                object obj = ResourceManager.GetObject("baker", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baker__1_ {
+            get {
+                object obj = ResourceManager.GetObject("baker (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baker__2_ {
+            get {
+                object obj = ResourceManager.GetObject("baker (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_27_de_ago__de_2025__20_10_53 {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image 27 de ago. de 2025, 20_10_53", resourceCulture);
