@@ -76,7 +76,7 @@ namespace Onlypães
                     //Apagar os campos de cadastro
                     txbPrecoCadastro.Clear();
                     txbPrecoCadastro.Clear();
-                    cmbCategoriaCadastro.Items.Clear();
+                    cmbCategoriaCadastro.SelectedIndex = -1;
                 }
                 else
                 {
@@ -84,6 +84,28 @@ namespace Onlypães
                           "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+        private void dgvProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int ls = dgvProdutos.SelectedCells[0].RowIndex;
+
+            // Colocar os valores das células no txbs de edição:
+            txbProdutoEditar.Text = dgvProdutos.Rows[ls].Cells[1].Value.ToString();
+            txbprecoEditar.Text = dgvProdutos.Rows[ls].Cells[2].Value.ToString();
+            cmbCategoriaEditar.SelectedIndex = dgvProdutos.Rows[ls].Cells[3].ColumnIndex;
+
+            // Armazenar o ID de quem foi selecionado:
+            idSelecionado = (int)dgvProdutos.Rows[ls].Cells[0].Value;
+
+
+            // Ativar o grbEditar:
+            grbEditar.Enabled = true;
+
+            // Ajustes no grbApagar:
+            lblApagarDescricao.Text = $"Apagar: {txbProdutoEditar.Text = dgvProdutos.Rows[ls].Cells[1].Value.ToString()}";
+
+            // Ativar o grbApagar:
+            grbApagar.Enabled = true;
         }
         public void ResetarCampos()
         {
@@ -125,27 +147,30 @@ namespace Onlypães
                 MessageBox.Show("selecione uma categoria.",
                     "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            Model.Produto produtoEditar = new Model.Produto();
-
-            produtoEditar.Nome = txbProdutoCadastro.Text;
-            produtoEditar.Preco = int.Parse(txbPrecoCadastro.Text);
-            produtoEditar.IdCategoria = cmbCategoriaCadastro.TabIndex;
-            produtoEditar.IdRespCadastro = usuario.Id;
-
-            if (produtoEditar.modificar())
-            {
-                MessageBox.Show("Produto modificado com sucesso!.",
-                "Show", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //Atualizar o dgv:
-                AtualizarDgv();
-                //Apagar os campos de cadastro
-                ResetarCampos();
-
-            }
             else
             {
-                MessageBox.Show("Falha ao modificar Produto.",
-                      "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Model.Produto produtoEditar = new Model.Produto();
+                produtoEditar.Id = idSelecionado;
+                produtoEditar.Nome = txbProdutoEditar.Text;
+                produtoEditar.Preco = int.Parse(txbprecoEditar.Text);
+                produtoEditar.IdCategoria = cmbCategoriaEditar.TabIndex;
+                produtoEditar.IdRespCadastro = usuario.Id;
+
+                if (produtoEditar.modificar())
+                {
+                    MessageBox.Show("Produto modificado com sucesso!.",
+                    "Show", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Atualizar o dgv:
+                    AtualizarDgv();
+                    //Apagar os campos de cadastro
+                    ResetarCampos();
+
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao modificar Produto.",
+                          "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -175,7 +200,8 @@ namespace Onlypães
                 }
             }
         }
-    
+
+       
     }
    
 }

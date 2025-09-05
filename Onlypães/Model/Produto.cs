@@ -103,12 +103,12 @@ namespace Onlypães.Model
         }
         public bool modificar()
         {
-            string comando = "UPDATE usuarios SET nome = @nome, " +
+            string comando = "UPDATE produtos SET nome = @nome, " +
                 "preco = @preco, id_categoria = @id_categoria, id_respcadastro = @id_respcadastro WHERE id = @id";
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
-
+            cmd.Parameters.AddWithValue("@id", Id);
             cmd.Parameters.AddWithValue("@nome", Nome);
             cmd.Parameters.AddWithValue("@preco", Preco);
 
