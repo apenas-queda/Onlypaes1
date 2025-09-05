@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Onlypães.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace Onlypães
         // Objetos globais:
         Model.Usuario usuario;
         int idSelecionado = 0; // armazenar o id do usuário selecionado p/ apagar ou editar:
-
+        
         public FormUsuarios(Model.Usuario usuario)
         {
             InitializeComponent();

@@ -27,5 +27,23 @@ namespace Onlypães
             FormUsuarios formUsuarios = new FormUsuarios(usuario);
             formUsuarios.ShowDialog(); // Mostrar o form
         }
+
+        private void btnComanda_Click(object sender, EventArgs e)
+        {
+            FormComandas formComandas = new FormComandas(usuario);
+            formComandas.ShowDialog();
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            FormProdutos formProdutos = new FormProdutos(usuario);
+            formProdutos.ShowDialog();
+        }
+
+        private void btnCaixa_Click(object sender, EventArgs e)
+        {
+            FormCaixa formCaixa = new FormCaixa(usuario);
+            formCaixa.ShowDialog();
+        }
     }
 }
