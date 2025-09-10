@@ -37,7 +37,12 @@ namespace Onlypães
                 cmbCategoriaEditar.Items.Add($"{dr["id"]} - {dr["nome"]}");
             }
         }
-        
+
+
+       
+
+
+
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -60,11 +65,12 @@ namespace Onlypães
             }
             else
             {
+
                 Model.Produto produtoCadastro = new Model.Produto();
 
                 produtoCadastro.Nome = txbProdutoCadastro.Text;
-                produtoCadastro.Preco = int.Parse(txbPrecoCadastro.Text);
-                produtoCadastro.IdCategoria = cmbCategoriaCadastro.TabIndex;
+                produtoCadastro.Preco = double.Parse(txbPrecoCadastro.Text);
+                produtoCadastro.IdCategoria = int.Parse(cmbCategoriaCadastro.Text.Split('-')[0]);
                 produtoCadastro.IdRespCadastro = usuario.Id;
 
                 if (produtoCadastro.Cadastrar())
@@ -152,8 +158,8 @@ namespace Onlypães
                 Model.Produto produtoEditar = new Model.Produto();
                 produtoEditar.Id = idSelecionado;
                 produtoEditar.Nome = txbProdutoEditar.Text;
-                produtoEditar.Preco = int.Parse(txbprecoEditar.Text);
-                produtoEditar.IdCategoria = cmbCategoriaEditar.TabIndex;
+                produtoEditar.Preco = double.Parse(txbprecoEditar.Text);
+                produtoEditar.IdCategoria = int.Parse(cmbCategoriaEditar.Text.Split('-')[0]);
                 produtoEditar.IdRespCadastro = usuario.Id;
 
                 if (produtoEditar.modificar())
@@ -198,9 +204,10 @@ namespace Onlypães
                     MessageBox.Show("Falha ao Apagar o produto.",
                     "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+               
             }
         }
-
+    
        
     }
    

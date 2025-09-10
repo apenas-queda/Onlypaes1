@@ -74,11 +74,7 @@ namespace Onlypães.Model
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
-            cmd.Parameters.AddWithValue("@nome", Nome);
-            cmd.Parameters.AddWithValue("@preco", Preco);
-
-            cmd.Parameters.AddWithValue("@id_categoria", IdCategoria);
-            cmd.Parameters.AddWithValue("@id_respcadastro", IdRespCadastro);
+            cmd.Parameters.AddWithValue("@id", Id);
             cmd.Prepare();
 
             try
@@ -111,7 +107,6 @@ namespace Onlypães.Model
             cmd.Parameters.AddWithValue("@id", Id);
             cmd.Parameters.AddWithValue("@nome", Nome);
             cmd.Parameters.AddWithValue("@preco", Preco);
-
             cmd.Parameters.AddWithValue("@id_categoria", IdCategoria);
             cmd.Parameters.AddWithValue("@id_respcadastro", IdRespCadastro);
 
