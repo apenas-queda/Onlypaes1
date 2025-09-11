@@ -103,6 +103,16 @@ namespace Onlypães.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Designcontest_Ecommerce_Business_Bar_code_256 {
+            get {
+                object obj = ResourceManager.GetObject("Designcontest-Ecommerce-Business-Bar-code.256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grocery {
             get {
                 object obj = ResourceManager.GetObject("grocery", resourceCulture);
