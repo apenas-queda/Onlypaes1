@@ -31,7 +31,19 @@ namespace Onlypães.Model
             conexaoBD.Desconectar(con);
             return tabela;
         }
-
+        public DataTable BuscarPorFicha()
+        {
+            string comando = "SELECT * FROM view_fichas WHERE Ficha = @id_ficha";
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+            cmd.Parameters.AddWithValue("@id_ficha", IdFicha);
+            cmd.Prepare();
+            DataTable tabela = new DataTable();
+            tabela.Load(cmd.ExecuteReader());
+            conexaoBD.Desconectar(con);
+            return tabela;
+        }
         // Cadastrar(ISERT na ordens_comandas)
         public bool Cadastrar()
         {
@@ -47,6 +59,37 @@ namespace Onlypães.Model
 
             cmd.Parameters.AddWithValue("@quantidade", Quantidade);
             cmd.Parameters.AddWithValue("@id_resp", IdResp);
+            cmd.Prepare();
+
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+        }
+        public bool EncerrarComanda()
+        {
+
+            string comando = "UPDATE ordens_comandas SET situacao = 0 " +
+                "WHERE id_ficha = @id_ficha AND situacao = 1";
+            Banco conexaoBD = new Banco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Parameters.AddWithValue("@id_ficha", IdFicha);
             cmd.Prepare();
 
             try

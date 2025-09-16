@@ -113,9 +113,39 @@ namespace Onlypães.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ebiene_E_Commerce_Cash_register_256 {
+            get {
+                object obj = ResourceManager.GetObject("Ebiene-E-Commerce-Cash-register.256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ebiene_E_Commerce_Cash_register_32 {
+            get {
+                object obj = ResourceManager.GetObject("Ebiene-E-Commerce-Cash-register.32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grocery {
             get {
                 object obj = ResourceManager.GetObject("grocery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hopstarter_Soft_Scraps_Document_Text_256 {
+            get {
+                object obj = ResourceManager.GetObject("Hopstarter-Soft-Scraps-Document-Text.256", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

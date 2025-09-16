@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormComandas));
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.grbInformacoes = new System.Windows.Forms.GroupBox();
-            this.grbLancamentos = new System.Windows.Forms.GroupBox();
-            this.lblComanda = new System.Windows.Forms.Label();
-            this.lblProdutoInformacoes = new System.Windows.Forms.Label();
-            this.lblProdutoLancamento = new System.Windows.Forms.Label();
-            this.lblQuantidadeLancamento = new System.Windows.Forms.Label();
-            this.txbComandaInformacoes = new System.Windows.Forms.TextBox();
+            this.btnContinuar = new System.Windows.Forms.Button();
             this.txbProdutoinformacoes = new System.Windows.Forms.TextBox();
+            this.txbComandaInformacoes = new System.Windows.Forms.TextBox();
+            this.lblProdutoInformacoes = new System.Windows.Forms.Label();
+            this.lblComanda = new System.Windows.Forms.Label();
+            this.grbLancamentos = new System.Windows.Forms.GroupBox();
+            this.btnLancar = new System.Windows.Forms.Button();
             this.txbQuantidadeLancamento = new System.Windows.Forms.TextBox();
             this.txbProdutoLancamento = new System.Windows.Forms.TextBox();
-            this.btnContinuar = new System.Windows.Forms.Button();
-            this.btnLancar = new System.Windows.Forms.Button();
+            this.lblQuantidadeLancamento = new System.Windows.Forms.Label();
+            this.lblProdutoLancamento = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -75,6 +75,55 @@
             this.grbInformacoes.TabStop = false;
             this.grbInformacoes.Text = "Informações";
             // 
+            // btnContinuar
+            // 
+            this.btnContinuar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnContinuar.Location = new System.Drawing.Point(6, 215);
+            this.btnContinuar.Name = "btnContinuar";
+            this.btnContinuar.Size = new System.Drawing.Size(372, 72);
+            this.btnContinuar.TabIndex = 4;
+            this.btnContinuar.Text = "Continuar";
+            this.btnContinuar.UseVisualStyleBackColor = false;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
+            // 
+            // txbProdutoinformacoes
+            // 
+            this.txbProdutoinformacoes.BackColor = System.Drawing.Color.SaddleBrown;
+            this.txbProdutoinformacoes.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbProdutoinformacoes.Location = new System.Drawing.Point(197, 149);
+            this.txbProdutoinformacoes.Name = "txbProdutoinformacoes";
+            this.txbProdutoinformacoes.Size = new System.Drawing.Size(181, 42);
+            this.txbProdutoinformacoes.TabIndex = 3;
+            // 
+            // txbComandaInformacoes
+            // 
+            this.txbComandaInformacoes.BackColor = System.Drawing.Color.SaddleBrown;
+            this.txbComandaInformacoes.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbComandaInformacoes.Location = new System.Drawing.Point(197, 43);
+            this.txbComandaInformacoes.Name = "txbComandaInformacoes";
+            this.txbComandaInformacoes.Size = new System.Drawing.Size(181, 42);
+            this.txbComandaInformacoes.TabIndex = 2;
+            // 
+            // lblProdutoInformacoes
+            // 
+            this.lblProdutoInformacoes.AutoSize = true;
+            this.lblProdutoInformacoes.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdutoInformacoes.Location = new System.Drawing.Point(48, 157);
+            this.lblProdutoInformacoes.Name = "lblProdutoInformacoes";
+            this.lblProdutoInformacoes.Size = new System.Drawing.Size(123, 34);
+            this.lblProdutoInformacoes.TabIndex = 1;
+            this.lblProdutoInformacoes.Text = "Produto :";
+            // 
+            // lblComanda
+            // 
+            this.lblComanda.AutoSize = true;
+            this.lblComanda.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComanda.Location = new System.Drawing.Point(28, 51);
+            this.lblComanda.Name = "lblComanda";
+            this.lblComanda.Size = new System.Drawing.Size(143, 34);
+            this.lblComanda.TabIndex = 0;
+            this.lblComanda.Text = "Comanda :";
+            // 
             // grbLancamentos
             // 
             this.grbLancamentos.Controls.Add(this.btnLancar);
@@ -90,63 +139,16 @@
             this.grbLancamentos.TabStop = false;
             this.grbLancamentos.Text = "Lançamento";
             // 
-            // lblComanda
+            // btnLancar
             // 
-            this.lblComanda.AutoSize = true;
-            this.lblComanda.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComanda.Location = new System.Drawing.Point(28, 51);
-            this.lblComanda.Name = "lblComanda";
-            this.lblComanda.Size = new System.Drawing.Size(143, 34);
-            this.lblComanda.TabIndex = 0;
-            this.lblComanda.Text = "Comanda :";
-            // 
-            // lblProdutoInformacoes
-            // 
-            this.lblProdutoInformacoes.AutoSize = true;
-            this.lblProdutoInformacoes.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProdutoInformacoes.Location = new System.Drawing.Point(48, 157);
-            this.lblProdutoInformacoes.Name = "lblProdutoInformacoes";
-            this.lblProdutoInformacoes.Size = new System.Drawing.Size(123, 34);
-            this.lblProdutoInformacoes.TabIndex = 1;
-            this.lblProdutoInformacoes.Text = "Produto :";
-            // 
-            // lblProdutoLancamento
-            // 
-            this.lblProdutoLancamento.AutoSize = true;
-            this.lblProdutoLancamento.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProdutoLancamento.Location = new System.Drawing.Point(48, 37);
-            this.lblProdutoLancamento.Name = "lblProdutoLancamento";
-            this.lblProdutoLancamento.Size = new System.Drawing.Size(123, 34);
-            this.lblProdutoLancamento.TabIndex = 0;
-            this.lblProdutoLancamento.Text = "Produto :";
-            // 
-            // lblQuantidadeLancamento
-            // 
-            this.lblQuantidadeLancamento.AutoSize = true;
-            this.lblQuantidadeLancamento.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidadeLancamento.Location = new System.Drawing.Point(6, 135);
-            this.lblQuantidadeLancamento.Name = "lblQuantidadeLancamento";
-            this.lblQuantidadeLancamento.Size = new System.Drawing.Size(165, 34);
-            this.lblQuantidadeLancamento.TabIndex = 1;
-            this.lblQuantidadeLancamento.Text = "Quantidade :";
-            // 
-            // txbComandaInformacoes
-            // 
-            this.txbComandaInformacoes.BackColor = System.Drawing.Color.SaddleBrown;
-            this.txbComandaInformacoes.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbComandaInformacoes.Location = new System.Drawing.Point(197, 43);
-            this.txbComandaInformacoes.Name = "txbComandaInformacoes";
-            this.txbComandaInformacoes.Size = new System.Drawing.Size(181, 42);
-            this.txbComandaInformacoes.TabIndex = 2;
-            // 
-            // txbProdutoinformacoes
-            // 
-            this.txbProdutoinformacoes.BackColor = System.Drawing.Color.SaddleBrown;
-            this.txbProdutoinformacoes.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbProdutoinformacoes.Location = new System.Drawing.Point(197, 149);
-            this.txbProdutoinformacoes.Name = "txbProdutoinformacoes";
-            this.txbProdutoinformacoes.Size = new System.Drawing.Size(181, 42);
-            this.txbProdutoinformacoes.TabIndex = 3;
+            this.btnLancar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnLancar.Location = new System.Drawing.Point(6, 199);
+            this.btnLancar.Name = "btnLancar";
+            this.btnLancar.Size = new System.Drawing.Size(372, 72);
+            this.btnLancar.TabIndex = 6;
+            this.btnLancar.Text = "Lançar";
+            this.btnLancar.UseVisualStyleBackColor = false;
+            this.btnLancar.Click += new System.EventHandler(this.btnLancar_Click);
             // 
             // txbQuantidadeLancamento
             // 
@@ -167,27 +169,25 @@
             this.txbProdutoLancamento.Size = new System.Drawing.Size(181, 42);
             this.txbProdutoLancamento.TabIndex = 4;
             // 
-            // btnContinuar
+            // lblQuantidadeLancamento
             // 
-            this.btnContinuar.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnContinuar.Location = new System.Drawing.Point(6, 215);
-            this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(372, 72);
-            this.btnContinuar.TabIndex = 4;
-            this.btnContinuar.Text = "Continuar";
-            this.btnContinuar.UseVisualStyleBackColor = false;
-            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
+            this.lblQuantidadeLancamento.AutoSize = true;
+            this.lblQuantidadeLancamento.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidadeLancamento.Location = new System.Drawing.Point(6, 135);
+            this.lblQuantidadeLancamento.Name = "lblQuantidadeLancamento";
+            this.lblQuantidadeLancamento.Size = new System.Drawing.Size(165, 34);
+            this.lblQuantidadeLancamento.TabIndex = 1;
+            this.lblQuantidadeLancamento.Text = "Quantidade :";
             // 
-            // btnLancar
+            // lblProdutoLancamento
             // 
-            this.btnLancar.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnLancar.Location = new System.Drawing.Point(6, 199);
-            this.btnLancar.Name = "btnLancar";
-            this.btnLancar.Size = new System.Drawing.Size(372, 72);
-            this.btnLancar.TabIndex = 6;
-            this.btnLancar.Text = "Lançar";
-            this.btnLancar.UseVisualStyleBackColor = false;
-            this.btnLancar.Click += new System.EventHandler(this.btnLancar_Click);
+            this.lblProdutoLancamento.AutoSize = true;
+            this.lblProdutoLancamento.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdutoLancamento.Location = new System.Drawing.Point(48, 37);
+            this.lblProdutoLancamento.Name = "lblProdutoLancamento";
+            this.lblProdutoLancamento.Size = new System.Drawing.Size(123, 34);
+            this.lblProdutoLancamento.TabIndex = 0;
+            this.lblProdutoLancamento.Text = "Produto :";
             // 
             // lblDescricao
             // 
@@ -201,7 +201,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Onlypães.Properties.Resources.Designcontest_Ecommerce_Business_Bar_code_256;
+            this.pictureBox1.Image = global::Onlypães.Properties.Resources.Hopstarter_Soft_Scraps_Document_Text_256;
             this.pictureBox1.Location = new System.Drawing.Point(739, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 80);
