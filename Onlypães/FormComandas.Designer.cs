@@ -78,6 +78,7 @@
             // btnContinuar
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Location = new System.Drawing.Point(6, 215);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(372, 72);
@@ -89,6 +90,7 @@
             // txbProdutoinformacoes
             // 
             this.txbProdutoinformacoes.BackColor = System.Drawing.Color.SaddleBrown;
+            this.txbProdutoinformacoes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbProdutoinformacoes.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbProdutoinformacoes.Location = new System.Drawing.Point(197, 149);
             this.txbProdutoinformacoes.Name = "txbProdutoinformacoes";
@@ -98,6 +100,7 @@
             // txbComandaInformacoes
             // 
             this.txbComandaInformacoes.BackColor = System.Drawing.Color.SaddleBrown;
+            this.txbComandaInformacoes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbComandaInformacoes.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbComandaInformacoes.Location = new System.Drawing.Point(197, 43);
             this.txbComandaInformacoes.Name = "txbComandaInformacoes";
@@ -142,6 +145,7 @@
             // btnLancar
             // 
             this.btnLancar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnLancar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLancar.Location = new System.Drawing.Point(6, 199);
             this.btnLancar.Name = "btnLancar";
             this.btnLancar.Size = new System.Drawing.Size(372, 72);
@@ -153,6 +157,7 @@
             // txbQuantidadeLancamento
             // 
             this.txbQuantidadeLancamento.BackColor = System.Drawing.Color.SaddleBrown;
+            this.txbQuantidadeLancamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbQuantidadeLancamento.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbQuantidadeLancamento.Location = new System.Drawing.Point(197, 127);
             this.txbQuantidadeLancamento.Name = "txbQuantidadeLancamento";
@@ -162,6 +167,7 @@
             // txbProdutoLancamento
             // 
             this.txbProdutoLancamento.BackColor = System.Drawing.Color.SaddleBrown;
+            this.txbProdutoLancamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbProdutoLancamento.Font = new System.Drawing.Font("Goudy Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbProdutoLancamento.Location = new System.Drawing.Point(197, 29);
             this.txbProdutoLancamento.Name = "txbProdutoLancamento";
@@ -212,6 +218,7 @@
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Location = new System.Drawing.Point(12, 701);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(384, 99);

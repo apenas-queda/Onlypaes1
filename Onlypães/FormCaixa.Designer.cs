@@ -55,6 +55,7 @@
             // txbNumeroComanda
             // 
             this.txbNumeroComanda.BackColor = System.Drawing.Color.SaddleBrown;
+            this.txbNumeroComanda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbNumeroComanda.Font = new System.Drawing.Font("Goudy Old Style", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNumeroComanda.Location = new System.Drawing.Point(316, 36);
             this.txbNumeroComanda.Name = "txbNumeroComanda";
@@ -64,6 +65,7 @@
             // btnListar
             // 
             this.btnListar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListar.Font = new System.Drawing.Font("Goudy Old Style", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.Location = new System.Drawing.Point(495, 36);
             this.btnListar.Name = "btnListar";
@@ -116,10 +118,11 @@
             // chbPagamento
             // 
             this.chbPagamento.AutoSize = true;
+            this.chbPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chbPagamento.Font = new System.Drawing.Font("Goudy Old Style", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbPagamento.Location = new System.Drawing.Point(556, 511);
             this.chbPagamento.Name = "chbPagamento";
-            this.chbPagamento.Size = new System.Drawing.Size(188, 27);
+            this.chbPagamento.Size = new System.Drawing.Size(185, 27);
             this.chbPagamento.TabIndex = 8;
             this.chbPagamento.Text = "Pagamento Recebido";
             this.chbPagamento.UseVisualStyleBackColor = true;
@@ -129,6 +132,7 @@
             // 
             this.btnEncerrarComanda.BackColor = System.Drawing.Color.IndianRed;
             this.btnEncerrarComanda.Enabled = false;
+            this.btnEncerrarComanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEncerrarComanda.ForeColor = System.Drawing.Color.Firebrick;
             this.btnEncerrarComanda.Location = new System.Drawing.Point(556, 557);
             this.btnEncerrarComanda.Name = "btnEncerrarComanda";
@@ -153,7 +157,10 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.txbNumeroComanda);
             this.Controls.Add(this.lblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCaixa";
             this.Text = "FormCaixa";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
